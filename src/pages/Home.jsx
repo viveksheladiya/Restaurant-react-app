@@ -1,6 +1,6 @@
-import React from "react";
-import headerImg from "../images/home-header.png";
-import Common from "../components/Common";
+import React from 'react';
+import headerImg from "../images/home-header.png"
+import Common from '../components/Common';
 
 export default function Home() {
   return (
@@ -12,5 +12,5 @@ export default function Home() {
       btnLink="/menu"
       img={headerImg}
     />
-  );
+  )
 }

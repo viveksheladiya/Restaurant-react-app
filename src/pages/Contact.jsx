@@ -1,16 +1,19 @@
-import React, { useState } from "react";
-import contactImg from "../images/contactImg.png";
+import React, { useState } from 'react'
+import contactImg from "../images/contactImg.png"
 
 export default function Contact() {
-  const [data, setData] = useState({
-    email: "",
-    phone: "",
-    message: "",
-  });
+
+  const [data, setData] = useState(
+    {
+      email : "",
+      phone : "",
+      message : "",
+    }
+  );
 
   const monitorInput = (event) => {
     const { name, value } = event.target;
-    setData({ ...data, [name]: value });
+    setData({...data, [name]:value});
   };
 
   const formSubmit = (e) => {
@@ -27,10 +30,7 @@ Message : ${data.message}.`
       <div className="mt-5">
         <h1 className="text-center">Contact Us</h1>
       </div>
-      <div
-        id="header"
-        className="d-flex align-items-start pt-md-4 pt-0 contact-header"
-      >
+      <div id="header" className="d-flex align-items-start pt-md-4 pt-0 contact-header">
         <div className="container-fluid">
           <div className="row">
             <div className="col-12 col-sm-10 row mx-auto py-5 justify-content-center align-items-center">
@@ -41,9 +41,7 @@ Message : ${data.message}.`
                 <form id="form" onSubmit={formSubmit}>
                   <p className="form-label">Email</p>
                   <div className="d-flex align-items-center gap-2">
-                    <div className="input-icon d-flex justify-content-center align-items-center">
-                      📧
-                    </div>
+                    <div className="input-icon d-flex justify-content-center align-items-center">📧</div>
                     <input
                       type="email"
                       name="email"
@@ -56,9 +54,7 @@ Message : ${data.message}.`
                   <br />
                   <p className="form-label">Phone Number</p>
                   <div className="d-flex align-items-center gap-2">
-                    <div className="input-icon d-flex justify-content-center align-items-center">
-                      📞
-                    </div>
+                    <div className="input-icon d-flex justify-content-center align-items-center">📞</div>
                     <input
                       type="text"
                       name="phone"
@@ -79,13 +75,7 @@ Message : ${data.message}.`
                     value={data.message}
                     onChange={monitorInput}
                   ></textarea>
-                  <button
-                    type="submit"
-                    className="btn btn-primary mt-3 px-4"
-                    id="send-btn"
-                  >
-                    Send
-                  </button>
+                  <button type="submit" className="btn btn-primary mt-3 px-4" id="send-btn">Send</button>
                 </form>
               </div>
             </div>
@@ -93,5 +83,5 @@ Message : ${data.message}.`
         </div>
       </div>
     </>
-  );
+  )
 }

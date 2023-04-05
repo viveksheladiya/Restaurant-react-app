@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../images/logo.jpg";
 
 export default function Login() {
+
   const formSubmit = (event) => {
     event.preventDefault();
   };
@@ -19,45 +20,18 @@ export default function Login() {
               <div className="col-md-7 col-lg-4 col-10">
                 <form id="auth-form" onSubmit={formSubmit}>
                   <div className="mb-3">
-                    <label for="exampleInputEmail1" className="form-label">
-                      Email address
-                    </label>
-                    <input
-                      type="email"
-                      className="form-control bg-transparent auth-field"
-                      id="exampleInputEmail1"
-                      aria-describedby="emailHelp"
-                      placeholder="Enter Email Here"
-                    />
+                    <label for="exampleInputEmail1" className="form-label">Email address</label>
+                    <input type="email" className="form-control bg-transparent auth-field" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email Here" />
                   </div>
                   <div className="mb-3">
-                    <label for="exampleInputPassword1" className="form-label">
-                      Password
-                    </label>
-                    <input
-                      type="password"
-                      className="form-control bg-transparent auth-field"
-                      id="exampleInputPassword1"
-                      placeholder="Enter Password Here"
-                    />
+                    <label for="exampleInputPassword1" className="form-label">Password</label>
+                    <input type="password" className="form-control bg-transparent auth-field" id="exampleInputPassword1" placeholder="Enter Password Here" />
                   </div>
                   <div className="mb-3 form-check">
-                    <input
-                      type="checkbox"
-                      className="form-check-input"
-                      id="exampleCheck1"
-                    />
-                    <label className="form-check-label" for="exampleCheck1">
-                      Rememeber me
-                    </label>
+                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                      <label className="form-check-label" for="exampleCheck1">Rememeber me</label>
                   </div>
-                  <button
-                    type="submit"
-                    className="btn btn-primary px-4"
-                    id="send-btn"
-                  >
-                    Sign in
-                  </button>
+                  <button type="submit" className="btn btn-primary px-4" id="send-btn">Sign in</button>
                 </form>
               </div>
             </div>
@@ -65,5 +39,5 @@ export default function Login() {
         </div>
       </div>
     </>
-  );
+  )
 }
