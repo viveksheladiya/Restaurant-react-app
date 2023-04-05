@@ -18,7 +18,7 @@ export default function NavBar() {
                   {/* Main Navigation Menu */}
                   <ul className="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
                     <li className="nav-item">
-                      <NavLink className="nav-link" to="/home">Home</NavLink>
+                      <NavLink className="nav-link" to="/">Home</NavLink>
                     </li>
                     <li className="nav-item">
                       <NavLink className="nav-link" to="/menu">Menu</NavLink>
