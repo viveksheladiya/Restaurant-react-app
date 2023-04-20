@@ -2,18 +2,16 @@ import React, { useState } from "react";
 import FoodCard from "../components/FoodCard";
 import DummyData from "../components/DummyData";
 
-
 export default function Menu() {
-
   const [searchItem, setSearchItem] = useState("");
 
   const searchItems = (event) => {
     setSearchItem(event.target.value);
-  }
+  };
 
   const filteredItems = DummyData.filter((item) => {
-    return (item.foodTitle.toLowerCase().includes(searchItem.toLowerCase()));
-  })
+    return item.foodTitle.toLowerCase().includes(searchItem.toLowerCase());
+  });
 
   return (
     <>
@@ -35,11 +33,8 @@ export default function Menu() {
             {filteredItems.length > 0 ? (
               filteredItems.map((filteredItem) => {
                 return (
-                  <FoodCard
-                    key={filteredItem.foodId}
-                    foodItem={filteredItem}
-                  />
-                )
+                  <FoodCard key={filteredItem.foodId} foodItem={filteredItem} />
+                );
               })
             ) : (
               <p className="text-center fs-4">Sorry, No match found 😢 </p>
@@ -48,5 +43,5 @@ export default function Menu() {
         </div>
       </div>
     </>
-  )
+  );
 }

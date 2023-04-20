@@ -2,21 +2,18 @@ import React, { useState } from "react";
 import logo from "../images/logo.jpg";
 
 export default function SignUp() {
-
-  const [details, setDetails] = useState(
-    {
-      name: "",
-      number: "",
-      address: "",
-      email: "",
-      password: "",
-    }
-  );
+  const [details, setDetails] = useState({
+    name: "",
+    number: "",
+    address: "",
+    email: "",
+    password: "",
+  });
 
   const monitorInput = (event) => {
     const { name, value } = event.target;
     setDetails({ ...details, [name]: value });
-  }
+  };
 
   const formSubmit = (event) => {
     event.preventDefault();
@@ -28,7 +25,6 @@ export default function SignUp() {
         address : ${details.address},
         password : ${details.password},
     `);
-    
   };
 
   return (
@@ -45,7 +41,9 @@ export default function SignUp() {
                 <form id="auth-form" onSubmit={formSubmit}>
                   {/* Name Field */}
                   <div className="mb-3">
-                    <label htmlFor="inputName" className="form-label">Name</label>
+                    <label htmlFor="inputName" className="form-label">
+                      Name
+                    </label>
                     <input
                       type="text"
                       name="name"
@@ -58,7 +56,9 @@ export default function SignUp() {
                   </div>
                   {/* Phone Number Field */}
                   <div className="mb-3">
-                    <label htmlFor="inputPhone" className="form-label">Phone Number</label>
+                    <label htmlFor="inputPhone" className="form-label">
+                      Phone Number
+                    </label>
                     <input
                       type="tel"
                       name="number"
@@ -71,7 +71,9 @@ export default function SignUp() {
                   </div>
                   {/* Address Field */}
                   <div className="mb-3">
-                    <label htmlFor="inputAddress" className="form-label">Home Address</label>
+                    <label htmlFor="inputAddress" className="form-label">
+                      Home Address
+                    </label>
                     <input
                       type="text"
                       name="address"
@@ -84,7 +86,9 @@ export default function SignUp() {
                   </div>
                   {/* Email Field */}
                   <div className="mb-3">
-                    <label htmlFor="exampleInputEmail1" className="form-label">Email Address</label>
+                    <label htmlFor="exampleInputEmail1" className="form-label">
+                      Email Address
+                    </label>
                     <input
                       type="email"
                       name="email"
@@ -98,7 +102,12 @@ export default function SignUp() {
                   </div>
                   {/* Password Field */}
                   <div className="mb-4">
-                    <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
+                    <label
+                      htmlFor="exampleInputPassword1"
+                      className="form-label"
+                    >
+                      Password
+                    </label>
                     <input
                       type="password"
                       name="password"
@@ -109,7 +118,13 @@ export default function SignUp() {
                       onChange={monitorInput}
                     />
                   </div>
-                  <button type="submit" className="btn btn-primary px-4" id="send-btn">Sign up</button>
+                  <button
+                    type="submit"
+                    className="btn btn-primary px-4"
+                    id="send-btn"
+                  >
+                    Sign up
+                  </button>
                 </form>
               </div>
             </div>
@@ -117,5 +132,5 @@ export default function SignUp() {
         </div>
       </div>
     </>
-  )
+  );
 }
